@@ -160,8 +160,9 @@
 
 .text-block {
     display: grid;
-    gap: calc(var(--main-gap) / 2); /* 5px на мобилке, 10px на планшете */
+    gap: var(--main-gap); /* 10px на мобилке */
 }
+
 
 /* Добавлено .section-how__title */
 .section-how__title,
@@ -252,7 +253,6 @@
         padding: calc(3 * var(--main-gap)) var(--main-gap);
     }
 
-    /* Стало в @media (width >= 768px) */
     .content-section {
         align-items: start;
         grid-template-columns: 1fr 2fr;
@@ -268,18 +268,14 @@
     }
 
 
-    /* Секция 2: заголовок слева (1 колонка), карточки на всю ширину (3 колонки) */
     .what .content-section__title {
         grid-column: 1 / 2;
     }
 
     .what .text-blocks {
-        display: grid;
-        gap: var(--main-gap);
         grid-column: 1 / -1;
-        grid-template-columns: repeat(3, 1fr);
-        align-items: start; /* Добавлено выравнивание */
     }
+
 
     .grid {
         grid-template-rows: repeat(3, auto);
@@ -332,7 +328,10 @@
     }
 
     .what .text-blocks {
+        display: grid;
         grid-template-columns: repeat(3, 1fr);
+        gap: var(--main-gap);
         grid-column: 1 / -1;
+        align-items: start;
     }
 }
