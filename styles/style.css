@@ -230,7 +230,6 @@
     text-shadow: 2px 2px 0 var(--color-title-shadow);
 }
 
-/* ===== Адаптив: планшет (>= 768px) ===== */
 
 @media (width >= 768px) {
     .header__title {
@@ -241,13 +240,12 @@
         inline-size: 50%;
     }
 
-    /* Секции 1 и 3 — заголовок слева, карточки справа */
+
     .content-section {
         grid-template-columns: 1fr 2fr;
         align-items: start;
     }
 
-    /* Секция 2 — заголовок сверху, карточки в 3 колонки */
     .content-section_type_three {
         grid-template-columns: 1fr;
     }
@@ -257,12 +255,10 @@
         align-items: start;
     }
 
-    /* Галерея — заголовок сверху, картинки под ним */
     .content-section_type_gallery {
         grid-template-columns: 1fr;
     }
 
-    /* Заголовок галереи — розовая плашка на всю ширину, виден в обеих темах */
     .content-section_type_gallery .content-section__title {
         background-color: var(--color-card-title-bg);
         color: var(--color-card-title-text);
