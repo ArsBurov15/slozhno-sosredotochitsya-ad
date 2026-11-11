@@ -12,7 +12,7 @@
   <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="./images/mobile-icon.png" />
 
-  <!-- Стили: шрифты -> глобальные -> переменные -> основные -> темы -->
+  <!-- Стили -->
   <link rel="stylesheet" href="./fonts/fonts.css" />
   <link rel="stylesheet" href="./styles/globals.css" />
   <link rel="stylesheet" href="./styles/variables.css" />
@@ -22,7 +22,6 @@
 </head>
 <body class="page">
 <header class="header decorated-zone">
-  <!-- Добавили aria-hidden="true" -->
   <span class="header__rec" aria-hidden="true">REC</span>
 
   <nav class="header__theme-menu">
@@ -67,7 +66,6 @@
             Особенно сложно сосредоточиться, когда задач много и все они — важные. Где же легендарная
             многозадачность, когда она так нужна вам (и всем нанимающим менеджерам этого мира)? А дело в том,
             что её просто не существует. Исследователи
-            <!-- Добавили rel="noopener" -->
             <a class="content__link" href="https://dana.org/article/multicosts-of-multitasking/" target="_blank" rel="noopener">выяснили</a>,
             что мозгу тяжело концентрироваться даже на двух делах одновременно. А когда в поле внимания
             попадает несколько важных задач, организм паникует и выделяет кортизол и адреналин — «гормоны
@@ -96,7 +94,6 @@
     <h2 class="content-section__title">Что снижает концентрацию внимания?</h2>
     <div class="text-blocks">
       <article class="text-block">
-        <!-- Исправили "Многозадачность" на "Концентрация" -->
         <h3 class="text-block__heading title-decor">Концентрация</h3>
         <div class="text-block__main-content">
           <p class="text-block__paragraph">
@@ -200,14 +197,14 @@
     </div>
   </section>
 
-  <!-- Галерея -->
-  <section class="content-section grid">
+  <!-- Галерея (без content-section, картинки прямые потомки) -->
+  <section class="grid">
     <h2 class="grid-heading title-decor">А можно в картинках?</h2>
-    <img src="./images/sunset.png" loading="lazy" alt="Иллюстрация заката" class="grid__image" />
-    <img src="./images/ice-cream.png" loading="lazy" alt="Иллюстрация с десертом" class="grid__image" />
-    <img src="./images/tape.png" loading="lazy" alt="Иллюстрация с кассетой" class="grid__image" />
-    <img src="./images/books.png" loading="lazy" alt="Иллюстрация стопка книг" class="grid__image" />
-    <img src="./images/street.png" loading="lazy" alt="Иллюстрация японской улицы" class="grid__image" />
+    <img class="grid__image" src="./images/sunset.png" alt="Иллюстрация заката" loading="lazy" />
+    <img class="grid__image" src="./images/ice-cream.png" alt="Иллюстрация с десертом" loading="lazy" />
+    <img class="grid__image" src="./images/tape.png" alt="Иллюстрация с кассетой" loading="lazy" />
+    <img class="grid__image" src="./images/books.png" alt="Иллюстрация стопка книг" loading="lazy" />
+    <img class="grid__image" src="./images/street.png" alt="Иллюстрация японской улицы" loading="lazy" />
   </section>
 </main>
 

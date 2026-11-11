@@ -32,8 +32,8 @@
 
 /* Современный синтаксис для мобильных */
 @supports (block-size: 100dvb) {
-    .footer,
-    .header {
+    .header,
+    .footer {
         block-size: 100dvb;
     }
 }
@@ -104,14 +104,13 @@
 }
 
 .header__theme-menu-button:hover {
-    border: 1px solid var(--nav-hover-color, var(--nav-color)); /* Фолбэк */
+    border: 1px solid var(--nav-hover-color, var(--nav-color));
 }
 
 .header__theme-menu-button:focus {
     outline: none;
 }
 
-/* Чек-лист: доступность при Tab */
 .header__theme-menu-button:focus-visible {
     outline-offset: 1px;
     outline: 1px solid var(--nav-color);
@@ -143,15 +142,15 @@
 }
 
 .content-section {
-    gap: var(--main-gap);
+    gap: calc(2 * var(--main-gap)); /* Исправлено: 20px вместо 10px */
     display: grid;
 }
 
 .content-section__title {
-    margin-block-end: calc(2 * var(--main-gap));
     line-height: var(--main-line-height);
     color: var(--section-heading-color);
     font-size: var(--main-text-size);
+    /* margin-block-end убран */
 }
 
 .text-blocks {
@@ -160,10 +159,12 @@
 }
 
 .text-block {
-    gap: var(--main-gap);
     display: grid;
+    gap: calc(var(--main-gap) / 2); /* 5px на мобилке, 10px на планшете */
 }
 
+/* Добавлено .section-how__title */
+.section-how__title,
 .text-block__heading {
     font-size: var(--main-text-size);
     line-height: var(--main-line-height);
@@ -251,14 +252,21 @@
         padding: calc(3 * var(--main-gap)) var(--main-gap);
     }
 
+    /* Стало в @media (width >= 768px) */
     .content-section {
         align-items: start;
         grid-template-columns: 1fr 2fr;
+        gap: var(--main-gap);
     }
 
-    .content-section__title {
-        margin-block-end: 0;
+    .text-blocks {
+        gap: var(--main-gap); /* 20px между карточками на планшете и десктопе */
     }
+
+    .text-block {
+        gap: calc(var(--main-gap) / 2); /* 10px между заголовком и абзацем карточки */
+    }
+
 
     /* Секция 2: заголовок слева (1 колонка), карточки на всю ширину (3 колонки) */
     .what .content-section__title {
@@ -270,6 +278,7 @@
         gap: var(--main-gap);
         grid-column: 1 / -1;
         grid-template-columns: repeat(3, 1fr);
+        align-items: start; /* Добавлено выравнивание */
     }
 
     .grid {
