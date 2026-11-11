@@ -1,31 +1,31 @@
-:root.theme-dark {
-    --color-bg: #000028;
-    --color-text: #f1b2ce;
-    --color-accent: #ff0070;
-    --color-title: #db00ff;
-    --color-title-shadow: #ff0070;
-    --color-button: #ff0070;
-    --color-button-hover: rgb(255 0 112 / 0.4);
-    --color-section-title: #ff0070;
-    --color-card-title-bg: #ff0070;
-    --color-card-title-text: #000028;
-    --bg-image: url('../images/cover-image-dark.png');
-    --rec-display: block;
-}
-
 @media (prefers-color-scheme: dark) {
     :root {
-        --color-bg: #000028;
-        --color-text: #f1b2ce;
-        --color-accent: #ff0070;
-        --color-title: #db00ff;
-        --color-title-shadow: #ff0070;
-        --color-button: #ff0070;
-        --color-button-hover: rgb(255 0 112 / 0.4);
-        --color-section-title: #ff0070;
-        --color-card-title-bg: #ff0070;
-        --color-card-title-text: #000028;
         --bg-image: url('../images/cover-image-dark.png');
-        --rec-display: block;
+        --main-text-color: #f1b2ce;
+        --nav-color: #ff0070;
+        --header-logo-color: #db00ff;
+        --main-bg-color: #000028;
+        --section-heading-color: #ff0070;
+        --accent-color: #ff0070;
+        --footer-logo-color: #db00ff;
+        --main-heading-color: #00183f;
+        --nav-hover-color: rgba(255, 0, 112, 0.4);
     }
+}
+
+:root.theme-dark {
+    --nav-hover-color: rgba(255, 0, 112, 0.4);
+    --main-bg-color: #000028;
+    --accent-color: #ff0070;
+    --section-heading-color: #ff0070;
+    --main-text-color: #f1b2ce;
+    --header-logo-color: #db00ff;
+    --footer-logo-color: #db00ff;
+    --nav-color: #ff0070;
+    --bg-image: url('../images/cover-image-dark.png');
+    --main-heading-color: #00183f;
+}
+
+.theme-dark .header__rec {
+    display: block;
 }
